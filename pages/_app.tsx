@@ -13,6 +13,7 @@ const inter = Inter({
   weight: ["400", "500", "700"],
 });
 
+// design and code by farriq muwaffaq
 export default function App({ Component, pageProps }: AppProps) {
   const loading = useLoading();
   return (

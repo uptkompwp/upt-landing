@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react";
 import BlurBuble from "./BlurBuble";
 import useLoading from "@/hooks/useLoading";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 interface IbaseLayout {
   children: ReactNode;
   className?: string;
@@ -31,6 +32,7 @@ const BaseLayout: React.FC<IbaseLayout> = ({ children, className }) => {
           {children}
         </Box>
       )}
+      {/* <Footer /> */}
       <BlurBuble />
     </Box>
   );
