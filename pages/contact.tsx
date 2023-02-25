@@ -1,6 +1,6 @@
 import BoxCard from "@/components/Card";
-import IGIMG from "@/public/ig.png";
-import YTIMG from "@/public/yt.png";
+import IGIMG from "../public/ig.png";
+import YTIMG from "../public/yt.png";
 import {
   Box,
   Button,
@@ -13,7 +13,7 @@ import {
   Input,
   List,
   ListItem,
-  Text,
+  Text
 } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
@@ -31,7 +31,6 @@ const Contact: NextPage = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
     resetField,
   } = useForm<JoinForm>();

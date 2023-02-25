@@ -1,5 +1,5 @@
 import CodeEditor from "@/components/CodeEditor";
-import Komputer from '@/public/pc.png';
+import Komputer from '../public/pc.png';
 import { Box, Button, Code, Heading, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 import Image from "next/image";
