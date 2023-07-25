@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
-import AboutImg from "../public/upt-komp.jpg";
+import AboutImg from "../public/upt.jpg";
 const About: NextPage = () => {
   return (
     <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} py={{ lg: 14 }} gap={10}>
