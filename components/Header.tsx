@@ -17,7 +17,7 @@ import BaseLink from "./BaseLink";
 import MobileLink from "./MobileLink";
 const Header = () => {
   const resize = useMatchMedia({ mediaQuery: "(max-width: 62em)" });
-  const [open, setOpen] = useState<boolean>(resize ? true : false);
+  const [open, setOpen] = useState<boolean>(false);
   const loading = useLoading();
 
   useEffect(() => {
@@ -40,7 +40,6 @@ const Header = () => {
   // loading
   useLoading(handleChange);
   const router = useRouter();
-
   return (
     <Box
       as={"header"}

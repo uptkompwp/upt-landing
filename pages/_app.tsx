@@ -7,6 +7,7 @@ import { Inter } from "@next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "nprogress/nprogress.css";
+import { useEffect, useState } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,6 +17,10 @@ const inter = Inter({
 // design and code by farriq muwaffaq
 export default function App({ Component, pageProps }: AppProps) {
   const loading = useLoading();
+  const [mounted, setMounted] = useState<boolean>(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <ChakraProvider theme={theme}>
       <BaseLayout className={inter.className}>
@@ -25,7 +30,7 @@ export default function App({ Component, pageProps }: AppProps) {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
           />
         </Head>
-        <Component {...pageProps} />
+        {mounted ? <Component {...pageProps} /> : <></>}
       </BaseLayout>
     </ChakraProvider>
   );
