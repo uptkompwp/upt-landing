@@ -215,7 +215,7 @@ const Contact: NextPage = () => {
               height={24}
             />
             {!errors.alamat ? (
-              <FormHelperText>Masukan Nomer Alamat</FormHelperText>
+              <FormHelperText>Masukan Alamat</FormHelperText>
             ) : (
               <FormErrorMessage>Alamat Tidak Boleh Kosong</FormErrorMessage>
             )}
