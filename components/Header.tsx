@@ -16,8 +16,6 @@ const Header = () => {
   useEffect(() => {
     dispatch(setMobile(resize));
   }, [resize]);
-  // const header = useRef<Boolean>(null)
-
   return (
     <Box
       as={"header"}
@@ -30,7 +28,7 @@ const Header = () => {
       top={0}
       py={4}
       zIndex={9999}
-      bg={'black'}
+      bg={"black"}
     >
       <Box
         px={{ lg: "36", base: 6 }}
