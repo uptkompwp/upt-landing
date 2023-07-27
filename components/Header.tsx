@@ -41,10 +41,10 @@ const Header = () => {
       justifyContent={"space-between"}
       alignItems={"center"}
       w={"full"}
-      h={24}
+      h={28}
       position={"sticky"}
       top={0}
-      py={{ lg: 2, sm: 4 }}
+      py={2}
       zIndex={9999}
       bg={"#19181E"}
     >
