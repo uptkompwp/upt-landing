@@ -16,7 +16,7 @@ const BaseLayout: React.FC<IbaseLayout> = ({ children, className }) => {
     <Box
       className={className}
       h={"100vh"}
-      py={{ lg: 16, base: 4 }}
+      pb={{ lg: 16, base: 4 }}
       display={"flex"}
       flexDirection={"column"}
     >
@@ -27,7 +27,7 @@ const BaseLayout: React.FC<IbaseLayout> = ({ children, className }) => {
             as={motion.div}
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            py={10}
+            pb={10}
           >
             {children}
           </Box>

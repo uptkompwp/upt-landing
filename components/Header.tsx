@@ -18,7 +18,6 @@ const Header = () => {
   }, [resize]);
 
 
-  const headerref = useRef<any | null>(null)
 
   // const handleScroll = () => {
   //   // console.log(headerref!.current)
@@ -45,10 +44,9 @@ const Header = () => {
       h={24}
       position={"sticky"}
       top={0}
-      py={4}
+      py={2}
       zIndex={9999}
-      bg={"black"}
-      ref={headerref}
+      bg={"#19181E"}
     >
       <Box
         px={{ lg: "36", base: 6 }}
