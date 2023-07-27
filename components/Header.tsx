@@ -44,7 +44,7 @@ const Header = () => {
       h={24}
       position={"sticky"}
       top={0}
-      py={2}
+      py={{ lg: 2, sm: 4 }}
       zIndex={9999}
       bg={"#19181E"}
     >
