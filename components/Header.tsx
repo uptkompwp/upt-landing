@@ -31,7 +31,6 @@ const Header = () => {
       py={4}
       zIndex={9999}
       bg={'black'}
-      ref={}
     >
       <Box
         px={{ lg: "36", base: 6 }}
