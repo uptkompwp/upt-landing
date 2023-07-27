@@ -2,7 +2,7 @@ import { setMobile } from "@/store/features/menuSlice";
 import { RootState } from "@/store/store";
 import { Box, HStack, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { memo, useEffect } from "react";
+import { memo, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BaseLink from "./BaseLink";
 import MobileMenu from "./headers_components/MobileMenu";
@@ -16,6 +16,25 @@ const Header = () => {
   useEffect(() => {
     dispatch(setMobile(resize));
   }, [resize]);
+
+
+  const headerref = useRef<any | null>(null)
+
+  // const handleScroll = () => {
+  //   // console.log(headerref!.current)
+  //   console.log(window.scrollY)
+
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll, true);
+
+  //   // Remove the event listener
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll, true);
+  //   };
+  // }, []);
+
   return (
     <Box
       as={"header"}
@@ -29,6 +48,7 @@ const Header = () => {
       py={4}
       zIndex={9999}
       bg={"black"}
+      ref={headerref}
     >
       <Box
         px={{ lg: "36", base: 6 }}
