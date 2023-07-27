@@ -13,7 +13,7 @@ import {
   Input,
   List,
   ListItem,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
@@ -215,7 +215,7 @@ const Contact: NextPage = () => {
               height={24}
             />
             {!errors.alamat ? (
-              <FormHelperText>Masukan Nomer Alamat</FormHelperText>
+              <FormHelperText>Masukan Alamat</FormHelperText>
             ) : (
               <FormErrorMessage>Alamat Tidak Boleh Kosong</FormErrorMessage>
             )}

@@ -17,21 +17,22 @@ const BaseLayout: React.FC<IbaseLayout> = ({ children, className }) => {
       className={className}
       h={"100vh"}
       py={{ lg: 16, base: 4 }}
-      px={{ lg: "36", base: 6 }}
       display={"flex"}
       flexDirection={"column"}
     >
       <Header />
-      {!loading && (
-        <Box
-          as={motion.div}
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          py={10}
-        >
-          {children}
-        </Box>
-      )}
+      <Box px={{ lg: "36", base: 6 }}>
+        {!loading && (
+          <Box
+            as={motion.div}
+            initial={{ opacity: 0, y: -15 }}
+            animate={{ opacity: 1, y: 0 }}
+            py={10}
+          >
+            {children}
+          </Box>
+        )}
+      </Box>
       {/* <Footer /> */}
       <BlurBuble />
     </Box>

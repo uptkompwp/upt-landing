@@ -1,45 +1,22 @@
-import useLoading from "@/hooks/useLoading";
-import useMatchMedia from "@/hooks/useMatchMedia";
-import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Heading,
-  HStack,
-  IconButton,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { setMobile } from "@/store/features/menuSlice";
+import { RootState } from "@/store/store";
+import { Box, HStack, useMediaQuery } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { memo, useEffect, useState } from "react";
+import { memo, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import BaseLink from "./BaseLink";
-import MobileLink from "./MobileLink";
+import MobileMenu from "./headers_components/MobileMenu";
+import Title from "./headers_components/Title";
 const Header = () => {
-  const resize = useMatchMedia({ mediaQuery: "(max-width: 62em)" });
-  const [open, setOpen] = useState<boolean>(false);
-  const loading = useLoading();
+  const [resize] = useMediaQuery("(max-width: 62em)");
+  const { mobile } = useSelector((state: RootState) => state.menu);
+  const dispatch = useDispatch();
+  const router = useRouter();
 
   useEffect(() => {
-    if (open) {
-      setOpen(true);
-    } else {
-      setOpen(false);
-    }
+    dispatch(setMobile(resize));
   }, [resize]);
-
-  const handleMenu = () => {
-    setOpen(true);
-  };
-  const closeMenu = () => {
-    setOpen(false);
-  };
-  const handleChange = () => {
-    setOpen(false);
-  };
-  // loading
-  useLoading(handleChange);
-  const router = useRouter();
+  // const header = useRef<Boolean>(null)
 
   return (
     <Box
@@ -49,128 +26,46 @@ const Header = () => {
       alignItems={"center"}
       w={"full"}
       h={24}
+      position={"sticky"}
+      top={0}
+      py={4}
+      zIndex={9999}
+      bg={'black'}
+      ref={}
     >
-      <Link href={"/"}>
-        <Heading userSelect={"none"} color={"white"} fontWeight={"extrabold"}>
-          UPT&nbsp;
-          <Text
-            display={"inline"}
-            bgGradient="linear(to-r, #2F58CD,  #FF0080)"
-            bgClip={"text"}
-          >
-            KOMP
-          </Text>
-        </Heading>
-      </Link>
+      <Box
+        px={{ lg: "36", base: 6 }}
+        display={"flex"}
+        justifyContent={"space-between"}
+        w={"full"}
+        alignItems={"center"}
+        h={"full"}
+      >
+        <Title />
 
-      {!resize ? (
-        <HStack spacing={"20"} p={7}>
-          <BaseLink href="/" active={router.asPath === "/"} title="Home" />
-          <BaseLink
-            href="/about"
-            active={router.asPath === "/about"}
-            title="About"
-          />
-          <BaseLink
-            href="/services"
-            active={router.asPath === "/services"}
-            title="Services"
-          />
-          <BaseLink
-            href="/contact"
-            active={router.asPath === "/contact"}
-            title="Contact"
-          />
-        </HStack>
-      ) : (
-        <>
-          <IconButton
-            aria-label="__hambuger"
-            bgColor={"transparent"}
-            borderColor={"gray.500"}
-            border={"1px solid"}
-            color={"white"}
-            _hover={{ bgColor: "transparent" }}
-            icon={<HamburgerIcon />}
-            onClick={handleMenu}
-          ></IconButton>
-
-          {open && (
-            <Box
-              as={motion.div}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              position={"fixed"}
-              zIndex={9999}
-              top={0}
-              left={0}
-              right={0}
-              bottom={0}
-              display={"grid"}
-              placeItems={"center"}
-              bgColor="black"
-              _after={{
-                content: `""`,
-                zIndex: -1,
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: "10em",
-                width: "10em",
-                bgColor: "white",
-                position: "absolute",
-                borderRadius: "100%",
-                m: "auto",
-                bgGradient: "radial( #2F58CD,  #FF0080)",
-                filter: "blur(3em)",
-              }}
-            >
-              <VStack spacing={5} py={2}>
-                <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-                  <MobileLink
-                    active={router.asPath === "/"}
-                    href="/"
-                    title="Home"
-                  />
-                </Box>
-                <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-                  <MobileLink
-                    active={router.asPath === "/about"}
-                    href="/about"
-                    title="About"
-                  />
-                </Box>
-                <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-                  <MobileLink
-                    href="/services"
-                    active={router.asPath === "/services"}
-                    title="Services"
-                  />
-                </Box>
-                <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-                  <MobileLink
-                    href="/contact"
-                    active={router.asPath === "/contact"}
-                    title="Contact"
-                  />
-                </Box>
-
-                <IconButton
-                  aria-label="_close"
-                  icon={<CloseIcon />}
-                  bgColor={"transparent"}
-                  color={"white"}
-                  borderColor={"gray"}
-                  border={"1px solid"}
-                  _hover={{ bgColor: "transparent" }}
-                  onClick={closeMenu}
-                ></IconButton>
-              </VStack>
-            </Box>
-          )}
-        </>
-      )}
+        {mobile ? (
+          <MobileMenu />
+        ) : (
+          <HStack spacing={"20"} p={7}>
+            <BaseLink href="/" active={router.asPath === "/"} title="Home" />
+            <BaseLink
+              href="/about"
+              active={router.asPath === "/about"}
+              title="About"
+            />
+            <BaseLink
+              href="/services"
+              active={router.asPath === "/services"}
+              title="Services"
+            />
+            <BaseLink
+              href="/contact"
+              active={router.asPath === "/contact"}
+              title="Contact"
+            />
+          </HStack>
+        )}
+      </Box>
     </Box>
   );
 };
