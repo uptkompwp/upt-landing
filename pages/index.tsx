@@ -30,9 +30,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Selamat datang di UPT STMIK Pekalongan</title>
-        <meta name="title" content="UPT KOMP STMIK" />
-        <meta name="description" content="UPT STMIK WIDYA PRATAMA PEKALONGAN" />
+        <title>Selamat datang di UPT IWIMA Pekalongan</title>
+        <meta name="title" content="UPT KOMP IWIMA" />
+        <meta name="description" content="UPT INSTITUT WIDYA PRATAMA PEKALONGAN" />
       </Head>
       <Box
         display={{ lg: "flex", base: "grid" }}
