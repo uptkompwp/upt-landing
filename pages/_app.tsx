@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
               name="viewport"
               content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
             />
-            <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+            <link rel="shortcut icon" href="/logo-upt.png" type="image/x-icon" />
           </Head>
           <Component {...pageProps} />
         </BaseLayout>
