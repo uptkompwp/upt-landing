@@ -74,34 +74,41 @@ export default function MobileMenu({}: Props) {
           }}
         >
           <VStack spacing={5} py={2}>
-            <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-              <MobileLink
-                active={router.asPath === "/"}
-                href="/"
-                title="Home"
-              />
-            </Box>
-            <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-              <MobileLink
-                active={router.asPath === "/about"}
-                href="/about"
-                title="About"
-              />
-            </Box>
-            <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-              <MobileLink
-                href="/services"
-                active={router.asPath === "/services"}
-                title="Services"
-              />
-            </Box>
-            <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
-              <MobileLink
-                href="/contact"
-                active={router.asPath === "/contact"}
-                title="Contact"
-              />
-            </Box>
+          <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
+    <MobileLink
+      active={router.asPath === "/"}
+      href="/"
+      title="Home"
+    />
+  </Box>
+  <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
+    <MobileLink
+      active={router.asPath === "/about"}
+      href="/about"
+      title="About"
+    />
+  </Box>
+  <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
+    <MobileLink
+      href="/services"
+      active={router.asPath === "/services"}
+      title="Services"
+    />
+  </Box>
+  <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
+    <MobileLink
+      href="/galleries"
+      active={router.asPath === "/galleries"}
+      title="Galleries"
+    />
+  </Box>
+  <Box as={motion.div} initial={{ y: -20 }} animate={{ y: 0 }}>
+    <MobileLink
+      href="/contact"
+      active={router.asPath === "/contact"}
+      title="Contact"
+    />
+  </Box>
 
             <IconButton
               aria-label="_close"
