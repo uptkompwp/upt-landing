@@ -12,9 +12,9 @@ const Services: NextPage = () => {
       py={{ lg: 14 }}
     >
       <Head>
-        <title>SERVICES UPT KOMP STMIK</title>
-        <meta name="title" content="SERVICES UPT KOMP STMIK" />
-        <meta name="description" content="UPT STMIK WIDYA PRATAMA PEKALONGAN" />
+        <title>SERVICES UPT KOMP IWIMA</title>
+        <meta name="title" content="SERVICES UPT KOMP IWIMA" />
+        <meta name="description" content="UPT INSTITUT WIDYA PRATAMA PEKALONGAN" />
       </Head>
       <GridItem w="100%">
         <BoxCard
