@@ -1,8 +1,17 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import { type NextPage } from "next";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 import Head from "next/head";
-import AboutImg from "../public/upt.jpg";
-const About: NextPage = () => {
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import AboutImg1 from "../public/upt.jpg";
+import AboutImg2 from "../public/upt2.jpg";
+import AboutImg3 from "../public/upt3.jpg";
+
+const About: React.FC = () => {
+  const images = [AboutImg1, AboutImg2, AboutImg3];
+
   return (
     <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} py={{ lg: 14 }} gap={10}>
       <Head>
@@ -44,7 +53,20 @@ const About: NextPage = () => {
         </Box>
       </Box>
       <Box w={{ base: "100%", lg: "50%" }}>
-        <Image src={AboutImg.src} borderRadius={"xl"} />
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={30}
+          slidesPerView={1}
+          style={{ borderRadius: "1rem", overflow: "hidden" }}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index}>
+              <img src={img.src} alt={`UPT Image ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </Box>
     </Flex>
   );
