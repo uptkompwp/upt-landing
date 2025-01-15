@@ -2,7 +2,7 @@ import { Box, SimpleGrid, Heading, Text } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper';
+import Pagination  from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
