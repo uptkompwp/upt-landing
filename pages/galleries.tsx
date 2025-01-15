@@ -1,17 +1,20 @@
 import { Box, SimpleGrid, Image, Heading, Text } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 const Galleries: NextPage = () => {
-  // Array foto-foto galeri
-  const photos = [
-    "/images/memories1.jpg",
-    "/images/memories2.jpg",
-    "/images/memories3.jpg",
-    "/images/memories4.jpg",
-    "/images/memories5.jpg",
-    "/images/memories6.jpg",
-  ];
+  const [photos, setPhotos] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchPhotos = async () => {
+      const res = await fetch("/api/photos");
+      const data = await res.json();
+      setPhotos(data.map((file: string) => `/images/${file}`));
+    };
+
+    fetchPhotos();
+  }, []);
 
   return (
     <>
