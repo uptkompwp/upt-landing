@@ -54,9 +54,9 @@ const Contact: NextPage = () => {
   return (
     <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} py={{ lg: 14 }} gap={10}>
       <Head>
-        <title>CONTACT OR JOIN UPT KOMP STMIK</title>
-        <meta name="title" content="SERVICES UPT KOMP STMIK" />
-        <meta name="description" content="UPT STMIK WIDYA PRATAMA PEKALONGAN" />
+        <title>CONTACT OR JOIN UPT KOMP IWIMA</title>
+        <meta name="title" content="SERVICES UPT KOMP IWIMA" />
+        <meta name="description" content="UPT INSTITUT WIDYA PRATAMA PEKALONGAN" />
       </Head>
       <Box w={{ base: "100%", lg: "50%" }}>
         <Heading
