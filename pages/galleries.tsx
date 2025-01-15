@@ -1,10 +1,13 @@
 import { Box, SimpleGrid, Heading, Text } from "@chakra-ui/react";
 import { type NextPage } from "next";
 import Head from "next/head";
+import SwiperCore, { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper";
+
+// Initialize Swiper modules
+SwiperCore.use([Pagination]);
 
 const Galleries: NextPage = () => {
   // Array foto-foto galeri
@@ -66,25 +69,25 @@ const Galleries: NextPage = () => {
               bgColor="gray.50"
             >
               <Swiper
-                modules={[Pagination]}
+                modules={[Pagination]} // Pastikan Pagination ada di sini
                 pagination={{ clickable: true }}
                 spaceBetween={10}
                 slidesPerView={1}
-              >
+                >
                 {group.map((photo, idx) => (
-                  <SwiperSlide key={idx}>
+                    <SwiperSlide key={idx}>
                     <Box
-                      as="img"
-                      src={photo}
-                      alt={`Memory ${index * chunkSize + idx + 1}`}
-                      objectFit="cover"
-                      w="100%"
-                      h="200px"
-                      borderRadius="md"
+                        as="img"
+                        src={photo}
+                        alt={`Memory ${index * chunkSize + idx + 1}`}
+                        objectFit="cover"
+                        w="100%"
+                        h="200px"
+                        borderRadius="md"
                     />
-                  </SwiperSlide>
+                    </SwiperSlide>
                 ))}
-              </Swiper>
+                </Swiper>
             </Box>
           ))}
         </SimpleGrid>
