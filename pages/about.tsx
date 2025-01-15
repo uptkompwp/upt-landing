@@ -15,9 +15,9 @@ const About: React.FC = () => {
   return (
     <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} py={{ lg: 14 }} gap={10}>
       <Head>
-        <title>About UPT KOMP STMIK</title>
-        <meta name="title" content="ABOUT UPT KOMP STMIK" />
-        <meta name="description" content="UPT STMIK WIDYA PRATAMA PEKALONGAN" />
+        <title>About UPT KOMP IWIMA</title>
+        <meta name="title" content="ABOUT UPT KOMP IWIMA" />
+        <meta name="description" content="UPT INSTITUT WIDYA PRATAMA PEKALONGAN" />
       </Head>
       <Box w={{ base: "100%", lg: "50%" }}>
         <Heading
@@ -44,7 +44,7 @@ const About: React.FC = () => {
             letterSpacing={2}
           >
             UPTKOMP adalah singkatan dari Unit Pelaksana Teknis Komputer. UPT
-            Komputer merupakan salah satu unit kerja di STMIK Widya Pratama
+            Komputer merupakan salah satu unit kerja di Institut Widya Pratama
             Pekalongan. Unit ini bertanggung jawab menyediakan infrastruktur
             teknologi informasi, baik hardware dan software, serta ketersediaan
             internet. Unit ini merupakan support system bagi seluruh
