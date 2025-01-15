@@ -74,6 +74,11 @@ const Header = () => {
               title="Services"
             />
             <BaseLink
+              href="/galleries"
+              active={router.asPath === "/galleries"}
+              title="Galleries"
+            />
+            <BaseLink
               href="/contact"
               active={router.asPath === "/contact"}
               title="Contact"
