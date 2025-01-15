@@ -8,9 +8,10 @@ import "swiper/css/pagination";
 import AboutImg1 from "../public/upt.jpeg";
 import AboutImg2 from "../public/upt2.jpeg";
 import AboutImg3 from "../public/upt3.jpeg";
+import AboutImg4 from "../public/upt4.jpeg";
 
 const About: React.FC = () => {
-  const images = [AboutImg1, AboutImg2, AboutImg3];
+  const images = [AboutImg1, AboutImg2, AboutImg3, AboutImg4];
 
   return (
     <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} py={{ lg: 14 }} gap={10}>
