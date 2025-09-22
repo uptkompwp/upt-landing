@@ -5,10 +5,10 @@ import Head from "next/head";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import AboutImg1 from "../public/upt.jpeg";
-import AboutImg2 from "../public/upt2.jpeg";
-import AboutImg3 from "../public/upt3.jpeg";
-import AboutImg4 from "../public/upt4.jpeg";
+import AboutImg1 from "../public/upt.jpg";
+import AboutImg2 from "../public/upt2.jpg";
+import AboutImg3 from "../public/upt3.jpg";
+import AboutImg4 from "../public/upt4.jpg";
 
 const About: React.FC = () => {
   const images = [AboutImg1, AboutImg2, AboutImg3, AboutImg4];
