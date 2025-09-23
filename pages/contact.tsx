@@ -1,5 +1,5 @@
 import BoxCard from "@/components/Card";
-import IGIMG from "../public/ig.png";
+import IGIMG from "../public/ig.jpg";
 import YTIMG from "../public/yt.png";
 import {
   Box,
