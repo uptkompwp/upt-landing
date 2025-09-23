@@ -1,13 +1,13 @@
 # UPT LANDING PAGE
-<p>PORTFOLIO UPT STMIK PEKALONGAN</p>
+<p>PORTFOLIO UPT Komputer Institut Widya Pratama Pekalongan</p>
 
 ## Menu
-- [] Home
+- Home
 - About
 - Service
 - Contact
 
 ## CLONE THIS REPO
 ``` 
-git clone https://github.com/Farriq-mfq/UPT-LANDING-PAGE.git 
+git clone https://github.com/uptkompwp/upt-landing.git
 ``` 
