@@ -1,5 +1,5 @@
-# UPT LANDING PAGE
-<p>PORTFOLIO UPT Komputer Institut Widya Pratama Pekalongan</p>
+# UPT KOMPUTER LANDING PAGE
+<p>UPT Komputer Institut Widya Pratama Pekalongan</p>
 
 ## Menu
 - Home
