@@ -1,6 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { JSX } from 'react';
-
 class Pixel {
   width: number;
   height: number;
