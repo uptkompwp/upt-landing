@@ -23,7 +23,7 @@ export default function Sosmed() {
         <div
             className="text-white space-y-6">
             {items.map((item, i) => (
-                <SpotlightCard className="p-0 !backdrop-blur-lg !bg-white/10 !border !border-white/20" spotlightColor="rgba(0, 255, 255, 0.2)" key={i}>
+                <SpotlightCard className="p-0 !backdrop-blur-lg !bg-white/10 !border !border-white/20" spotlightColor="rgba(0, 255, 255, 0.2)" key={item.href}>
                     <Card
                         className="border-none"
                     >
