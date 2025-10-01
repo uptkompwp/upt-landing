@@ -5,7 +5,6 @@ import nProgress from "nprogress";
 const useLoading = (handleChange?: () => void): boolean => {
     const router = useRouter();
     const [loading, setLoading] = useState<boolean>(false);
-    // configure npProgress
     nProgress.configure({ showSpinner: false })
 
     useEffect(() => {
@@ -18,7 +17,9 @@ const useLoading = (handleChange?: () => void): boolean => {
         };
         const handleComplete = (url: any) => {
             nProgress.done()
-            setLoading(false)
+            setTimeout(() => {
+                setLoading(false)
+            }, 500);
         };
 
         router.events.on("routeChangeStart", handleStart);
