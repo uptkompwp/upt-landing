@@ -7,6 +7,8 @@ import {
   Monitor,
   Users
 } from 'lucide-react';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 export default function Services() {
   const services = [
@@ -18,6 +20,7 @@ export default function Services() {
 
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      <NextSeo title='Services' />
       <div className="absolute inset-0 z-0 flex items-center justify-center top-0">
         <RippleGrid
           enableRainbow={false}

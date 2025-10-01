@@ -2,6 +2,8 @@ import Orb from '@/components/Orb';
 import SplitText from '@/components/SplitText';
 import TextType from '@/components/TextType';
 import { Button } from '@/components/ui/button';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
     }
     return (
         <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+            <NextSeo title='Home' />
             <div className="absolute inset-0 z-0 flex items-center justify-center mb-[100px]">
                 <div className="w-[400px] h-[400px] md:w-[600px] md:h-[600px]">
                     <Orb

@@ -1,9 +1,11 @@
 import LightRays from '@/components/LightRays'
 import SplitText from '@/components/SplitText'
+import { NextSeo } from 'next-seo'
 
 export default function NotFound() {
     return (
         <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+            <NextSeo title='404' />
             <div className="absolute inset-0 z-0 flex items-center justify-center">
                 <div className="w-full h-screen">
                     <LightRays

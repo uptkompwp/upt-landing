@@ -1,6 +1,8 @@
 import DomeGallery from '@/components/DomeGallery';
 import Particles from '@/components/Particles';
 import SplitText from '@/components/SplitText';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 
 export default function Galleries() {
@@ -18,6 +20,7 @@ export default function Galleries() {
 
   return (
     <div className="relative w-full min-h-screen overflow-y-auto">
+      <NextSeo title='Galleries' />
       <div className="absolute inset-0 z-0">
         <Particles
           particleColors={['#ffffff', '#ffffff']}

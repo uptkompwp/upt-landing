@@ -3,9 +3,12 @@ import SplitText from '@/components/SplitText';
 
 import FormJoin from '@/components/v2/FormJoin';
 import Sosmed from '@/components/v2/Sosmed';
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 export default function Contact() {
   return (
     <div className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      <NextSeo title='Contact' />
       <div className="absolute inset-0 z-0 flex items-center justify-center md:-top-[500px]">
         <Hyperspeed
           effectOptions={{

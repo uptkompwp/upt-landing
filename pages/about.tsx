@@ -5,11 +5,14 @@ import AboutImg1 from "../public/upt.jpg";
 import AboutImg2 from "../public/upt2.jpg";
 import AboutImg3 from "../public/upt3.jpg";
 import AboutImg4 from "../public/upt4.jpg";
+import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 export default function About() {
   const images = [AboutImg1, AboutImg2, AboutImg3, AboutImg4];
 
   return (
-    <div className="relative w-full h-screen flex items-center justify-center overflow-hidden ">
+    <div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <NextSeo title='About' />
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <div className="w-full h-screen">
           <LightRays
