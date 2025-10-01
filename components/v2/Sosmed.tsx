@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import SpotlightCard from "../SpotlightCard";
-
+import Image from "next/image";
 export default function Sosmed() {
     const items = [
         {
@@ -23,13 +23,12 @@ export default function Sosmed() {
         <div
             className="text-white space-y-6">
             {items.map((item, i) => (
-                <SpotlightCard className="p-0 !backdrop-blur-lg !bg-white/10 !border !border-white/20" spotlightColor="rgba(0, 255, 255, 0.2)">
+                <SpotlightCard className="p-0 !backdrop-blur-lg !bg-white/10 !border !border-white/20" spotlightColor="rgba(0, 255, 255, 0.2)" key={i}>
                     <Card
-                        key={i}
                         className="border-none"
                     >
                         <CardContent className="flex items-center gap-4 p-6">
-                            <img src={item.image} alt={item.title} className="w-12 h-12 rounded-lg" />
+                            <Image src={item.image} alt={item.title} className="w-12 h-12 rounded-lg object-contain" width={150} height={150} />
                             <div>
                                 <a
                                     href={item.href}
