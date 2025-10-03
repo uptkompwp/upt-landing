@@ -36,7 +36,7 @@ const Contact: NextPage = () => {
   } = useForm<JoinForm>();
   const onSubmit = (data: JoinForm) => {
     console.log(data);
-    const url = `https://wa.me/6282325353010?text=Hai%20kak%2C%20saya%20ingin%20mendaftar%20sebagai%20bagian%20dari%20UPT%20Laboratorium.%0ABerikut%20data-data%20yang%20saya%20lampirkan%20%3A%0A1.%20NIM%20%3A%20${
+    const url = `https://wa.me/62895422823256?text=Hai%20kak%2C%20saya%20ingin%20mendaftar%20sebagai%20bagian%20dari%20UPT%20Laboratorium.%0ABerikut%20data-data%20yang%20saya%20lampirkan%20%3A%0A1.%20NIM%20%3A%20${
       data.nim
     }%0A2.%20Nama%20Lengkap%20%3A%20${data.nama}%0A3.%20Kode%20Kelas%20%3A%20${
       data.kelas
