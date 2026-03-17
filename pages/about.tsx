@@ -1,10 +1,10 @@
 import CircularGallery from '@/components/CircularGallery';
 import LightRays from '@/components/LightRays';
 import SplitText from '@/components/SplitText';
-import AboutImg1 from "../public/upt.JPG";
-import AboutImg2 from "../public/upt2.JPG";
-import AboutImg3 from "../public/upt3.JPG";
-import AboutImg4 from "../public/upt4.JPG";
+import AboutImg1 from "../public/upt.jpg";
+import AboutImg2 from "../public/upt2.jpg";
+import AboutImg3 from "../public/upt3.jpg";
+import AboutImg4 from "../public/upt4.jpg";
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 export default function About() {
